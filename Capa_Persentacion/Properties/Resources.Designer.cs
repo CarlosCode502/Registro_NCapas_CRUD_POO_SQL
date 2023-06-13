@@ -63,9 +63,29 @@ namespace Capa_Persentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap borrar {
+        internal static System.Drawing.Bitmap borrador {
             get {
-                object obj = ResourceManager.GetObject("borrar", resourceCulture);
+                object obj = ResourceManager.GetObject("borrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap borrador1 {
+            get {
+                object obj = ResourceManager.GetObject("borrador1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap borrador2 {
+            get {
+                object obj = ResourceManager.GetObject("borrador2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,6 +103,16 @@ namespace Capa_Persentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editar {
+            get {
+                object obj = ResourceManager.GetObject("editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menos {
             get {
                 object obj = ResourceManager.GetObject("menos", resourceCulture);
@@ -93,9 +123,9 @@ namespace Capa_Persentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap salida {
+        internal static System.Drawing.Bitmap x_red {
             get {
-                object obj = ResourceManager.GetObject("salida", resourceCulture);
+                object obj = ResourceManager.GetObject("x red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

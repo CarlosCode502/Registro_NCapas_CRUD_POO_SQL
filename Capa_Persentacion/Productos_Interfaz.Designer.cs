@@ -29,7 +29,12 @@ namespace Capa_Persentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgViewProductos = new System.Windows.Forms.DataGridView();
+            this.colum_Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.column_Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_stock_Prin = new System.Windows.Forms.TextBox();
             this.txt_precio_Prin = new System.Windows.Forms.TextBox();
@@ -51,8 +56,10 @@ namespace Capa_Persentacion
             this.pbx_cerrar_Principal = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_cerrar_Principal = new System.Windows.Forms.Label();
+            this.lb_minimizar_Principal = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgViewProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,8 +67,8 @@ namespace Capa_Persentacion
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Minimizar_Principal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_cerrar_Principal)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgViewProductos
@@ -69,13 +76,56 @@ namespace Capa_Persentacion
             this.dtgViewProductos.AllowUserToAddRows = false;
             this.dtgViewProductos.AllowUserToDeleteRows = false;
             this.dtgViewProductos.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colum_Editar,
+            this.column_Eliminar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgViewProductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgViewProductos.Location = new System.Drawing.Point(6, 33);
             this.dtgViewProductos.Name = "dtgViewProductos";
-            this.dtgViewProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgViewProductos.Size = new System.Drawing.Size(656, 273);
             this.dtgViewProductos.TabIndex = 0;
+            this.dtgViewProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgViewProductos_CellContentClick);
+            // 
+            // colum_Editar
+            // 
+            this.colum_Editar.HeaderText = "Editar";
+            this.colum_Editar.Image = global::Capa_Persentacion.Properties.Resources.editar;
+            this.colum_Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colum_Editar.Name = "colum_Editar";
+            this.colum_Editar.ToolTipText = "Editar";
+            // 
+            // column_Eliminar
+            // 
+            this.column_Eliminar.HeaderText = "Eliminar";
+            this.column_Eliminar.Image = global::Capa_Persentacion.Properties.Resources.borrador;
+            this.column_Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.column_Eliminar.Name = "column_Eliminar";
+            this.column_Eliminar.ToolTipText = "Borrar";
             // 
             // groupBox1
             // 
@@ -89,13 +139,12 @@ namespace Capa_Persentacion
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_nombre_Prin);
-            this.groupBox1.Controls.Add(this.btn_guardar_Principal);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(321, 396);
+            this.groupBox1.Size = new System.Drawing.Size(321, 312);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo producto:";
@@ -204,65 +253,80 @@ namespace Capa_Persentacion
             // btn_guardar_Principal
             // 
             this.btn_guardar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_guardar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_guardar_Principal.FlatAppearance.BorderSize = 2;
             this.btn_guardar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar_Principal.ForeColor = System.Drawing.Color.Black;
-            this.btn_guardar_Principal.Location = new System.Drawing.Point(87, 326);
+            this.btn_guardar_Principal.Location = new System.Drawing.Point(90, 338);
             this.btn_guardar_Principal.Name = "btn_guardar_Principal";
             this.btn_guardar_Principal.Size = new System.Drawing.Size(148, 45);
             this.btn_guardar_Principal.TabIndex = 2;
             this.btn_guardar_Principal.Text = "Guardar";
             this.btn_guardar_Principal.UseVisualStyleBackColor = false;
             this.btn_guardar_Principal.Click += new System.EventHandler(this.btn_guardar_Principal_Click);
+            this.btn_guardar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_guardar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
             // btn_editar_Principal
             // 
             this.btn_editar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_editar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_editar_Principal.FlatAppearance.BorderSize = 2;
             this.btn_editar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_Principal.Location = new System.Drawing.Point(12, 338);
+            this.btn_editar_Principal.Location = new System.Drawing.Point(101, 338);
             this.btn_editar_Principal.Name = "btn_editar_Principal";
             this.btn_editar_Principal.Size = new System.Drawing.Size(148, 45);
             this.btn_editar_Principal.TabIndex = 3;
             this.btn_editar_Principal.Text = "Editar";
             this.btn_editar_Principal.UseVisualStyleBackColor = false;
-            this.btn_editar_Principal.Click += new System.EventHandler(this.btn_editar_Principal_Click);
+            this.btn_editar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_editar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
             // btn_eliminar_Principal
             // 
             this.btn_eliminar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_eliminar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_eliminar_Principal.FlatAppearance.BorderSize = 2;
             this.btn_eliminar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_Principal.Location = new System.Drawing.Point(191, 338);
+            this.btn_eliminar_Principal.Location = new System.Drawing.Point(284, 338);
             this.btn_eliminar_Principal.Name = "btn_eliminar_Principal";
             this.btn_eliminar_Principal.Size = new System.Drawing.Size(148, 45);
             this.btn_eliminar_Principal.TabIndex = 4;
             this.btn_eliminar_Principal.Text = "Eliminar";
             this.btn_eliminar_Principal.UseVisualStyleBackColor = false;
             this.btn_eliminar_Principal.Click += new System.EventHandler(this.btn_eliminar_Principal_Click);
+            this.btn_eliminar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_eliminar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
             // btn_salir_Principal
             // 
             this.btn_salir_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_salir_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_salir_Principal.FlatAppearance.BorderSize = 2;
             this.btn_salir_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir_Principal.Location = new System.Drawing.Point(379, 338);
+            this.btn_salir_Principal.Location = new System.Drawing.Point(467, 338);
             this.btn_salir_Principal.Name = "btn_salir_Principal";
             this.btn_salir_Principal.Size = new System.Drawing.Size(148, 45);
             this.btn_salir_Principal.TabIndex = 5;
             this.btn_salir_Principal.Text = "Salir";
             this.btn_salir_Principal.UseVisualStyleBackColor = false;
             this.btn_salir_Principal.Click += new System.EventHandler(this.btn_salir_Principal_Click);
+            this.btn_salir_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_salir_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.btn_guardar_Principal);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 413);
+            this.panel1.Size = new System.Drawing.Size(329, 411);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -275,36 +339,43 @@ namespace Capa_Persentacion
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1046, 35);
+            this.panel2.Size = new System.Drawing.Size(1014, 35);
             this.panel2.TabIndex = 8;
             // 
             // pbx_Minimizar_Principal
             // 
+            this.pbx_Minimizar_Principal.AccessibleDescription = "";
+            this.pbx_Minimizar_Principal.AccessibleName = "";
             this.pbx_Minimizar_Principal.Image = global::Capa_Persentacion.Properties.Resources.menos;
-            this.pbx_Minimizar_Principal.Location = new System.Drawing.Point(961, 3);
+            this.pbx_Minimizar_Principal.Location = new System.Drawing.Point(931, 3);
             this.pbx_Minimizar_Principal.Name = "pbx_Minimizar_Principal";
             this.pbx_Minimizar_Principal.Size = new System.Drawing.Size(30, 28);
             this.pbx_Minimizar_Principal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_Minimizar_Principal.TabIndex = 2;
             this.pbx_Minimizar_Principal.TabStop = false;
+            this.pbx_Minimizar_Principal.Tag = "fdgfgfdgdfg";
             this.pbx_Minimizar_Principal.Click += new System.EventHandler(this.pbx_Minimizar_Principal_Click);
+            this.pbx_Minimizar_Principal.MouseEnter += new System.EventHandler(this.RatonEnterImage);
+            this.pbx_Minimizar_Principal.MouseLeave += new System.EventHandler(this.RatonLeaveImage);
             // 
             // pbx_cerrar_Principal
             // 
             this.pbx_cerrar_Principal.Image = global::Capa_Persentacion.Properties.Resources.cerrar;
-            this.pbx_cerrar_Principal.Location = new System.Drawing.Point(1004, 4);
+            this.pbx_cerrar_Principal.Location = new System.Drawing.Point(974, 4);
             this.pbx_cerrar_Principal.Name = "pbx_cerrar_Principal";
             this.pbx_cerrar_Principal.Size = new System.Drawing.Size(30, 28);
             this.pbx_cerrar_Principal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_cerrar_Principal.TabIndex = 1;
             this.pbx_cerrar_Principal.TabStop = false;
             this.pbx_cerrar_Principal.Click += new System.EventHandler(this.pbx_cerrar_Principal_Click);
+            this.pbx_cerrar_Principal.MouseEnter += new System.EventHandler(this.RatonEnterImage);
+            this.pbx_cerrar_Principal.MouseLeave += new System.EventHandler(this.RatonLeaveImage);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(386, 4);
+            this.label7.Location = new System.Drawing.Point(370, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(272, 26);
             this.label7.TabIndex = 0;
@@ -314,7 +385,8 @@ namespace Capa_Persentacion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lb_cerrar_Principal);
+            this.panel3.Controls.Add(this.lb_minimizar_Principal);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.btn_editar_Principal);
             this.panel3.Controls.Add(this.btn_eliminar_Principal);
@@ -322,20 +394,28 @@ namespace Capa_Persentacion
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(329, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 413);
+            this.panel3.Size = new System.Drawing.Size(685, 411);
             this.panel3.TabIndex = 9;
             // 
-            // panel4
+            // lb_cerrar_Principal
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1046, 448);
-            this.panel4.TabIndex = 10;
+            this.lb_cerrar_Principal.AutoSize = true;
+            this.lb_cerrar_Principal.Location = new System.Drawing.Point(643, 3);
+            this.lb_cerrar_Principal.Name = "lb_cerrar_Principal";
+            this.lb_cerrar_Principal.Size = new System.Drawing.Size(35, 13);
+            this.lb_cerrar_Principal.TabIndex = 7;
+            this.lb_cerrar_Principal.Text = "Cerrar";
+            this.lb_cerrar_Principal.Visible = false;
+            // 
+            // lb_minimizar_Principal
+            // 
+            this.lb_minimizar_Principal.AutoSize = true;
+            this.lb_minimizar_Principal.Location = new System.Drawing.Point(594, 3);
+            this.lb_minimizar_Principal.Name = "lb_minimizar_Principal";
+            this.lb_minimizar_Principal.Size = new System.Drawing.Size(50, 13);
+            this.lb_minimizar_Principal.TabIndex = 3;
+            this.lb_minimizar_Principal.Text = "Minimizar";
+            this.lb_minimizar_Principal.Visible = false;
             // 
             // groupBox2
             // 
@@ -350,11 +430,24 @@ namespace Capa_Persentacion
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado de productos:";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1016, 448);
+            this.panel4.TabIndex = 10;
+            // 
             // Productos_Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 448);
+            this.ClientSize = new System.Drawing.Size(1016, 448);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos_Interfaz";
@@ -370,8 +463,9 @@ namespace Capa_Persentacion
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Minimizar_Principal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_cerrar_Principal)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -402,5 +496,9 @@ namespace Capa_Persentacion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lb_minimizar_Principal;
+        private System.Windows.Forms.Label lb_cerrar_Principal;
+        private System.Windows.Forms.DataGridViewImageColumn colum_Editar;
+        private System.Windows.Forms.DataGridViewImageColumn column_Eliminar;
     }
 }
