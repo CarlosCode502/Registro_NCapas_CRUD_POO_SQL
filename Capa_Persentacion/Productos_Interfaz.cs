@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Capa_Logica_de_Negocio;
 using System.Drawing;
 using System.Runtime.InteropServices;
-
+using System.IO;
 
 namespace Capa_Persentacion
 {
@@ -108,7 +108,7 @@ namespace Capa_Persentacion
             {
                 //si no se cumple se ejecutara la opción por defecto
                 //si se ejecuta esta opción se cambiará la imagen que se muestra en el control
-                pbx_cerrar_Principal.Image = Image.FromFile(@"C:\Users\admin\source\repos\Registro_NCapas_CRUD_POO_SQL\Capa_Persentacion\Resources\x red.png");
+                pbx_cerrar_Principal.Image = Image.FromFile(@"D:\CARLOS H\Documents\Visual Studio 2019\ProjectsPortafolio_CH\Registro_NCapas_CRUD_POO_SQL\Capa_Persentacion\Resources\x red.png");
                 lb_cerrar_Principal.Visible = true;
             }
         }
@@ -126,8 +126,10 @@ namespace Capa_Persentacion
                 lb_minimizar_Principal.Visible = false;
             }
             else
-                pbx_cerrar_Principal.Image = Image.FromFile(@"C:\Users\admin\source\repos\Registro_NCapas_CRUD_POO_SQL\Capa_Persentacion\Resources\cerrar.png");//se ejecuta la opción por defecto y se restablece la imagen.
-            lb_cerrar_Principal.Visible = false;
+            { 
+                pbx_cerrar_Principal.Image = Image.FromFile(@"D:\CARLOS H\Documents\Visual Studio 2019\ProjectsPortafolio_CH\Registro_NCapas_CRUD_POO_SQL\Capa_Persentacion\Resources\cerrar.png");
+                lb_cerrar_Principal.Visible = false;
+            }
         }
 
         /// <summary>
