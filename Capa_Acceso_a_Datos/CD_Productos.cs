@@ -60,9 +60,10 @@ namespace Capa_Acceso_a_Datos
         /// <param name="marca">Se asigna al campo @marca de la bd.</param>
         /// <param name="precio">Se asigna al campo @precio de la bd.</param>
         /// <param name="stock">Se asigna al campo @stock de la bd.</param>
-        public void Insertar(String nombre, String descripcion, String marca, Double precio, int stock)
+        public void Insertar(String nombre, String descripcion, String marca, Decimal precio, int stock)
         {
             comando.Connection = conexion.AbrirConexion();
+
             comando.CommandText = "insertar_productos";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@nombre", nombre);
@@ -85,7 +86,7 @@ namespace Capa_Acceso_a_Datos
         /// <param name="precio">Se modifica y se asigna al campo @precio de la bd.</param>
         /// <param name="stock">Se modifica y se asigna al campo @stock de la bd.</param>
         /// <param name="id_producto">Se modifica y se asigna al campo @id_producto de la bd.</param>
-        public void Editar(String nombre, String descripcion, String marca, Double precio, int stock, int id_producto)
+        public void Editar(String nombre, String descripcion, String marca, Decimal precio, int stock, int id_producto)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "editar_productos";

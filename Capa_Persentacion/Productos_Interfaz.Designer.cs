@@ -29,9 +29,12 @@ namespace Capa_Persentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos_Interfaz));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgViewProductos = new System.Windows.Forms.DataGridView();
             this.colum_Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.column_Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -47,8 +50,8 @@ namespace Capa_Persentacion
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nombre_Prin = new System.Windows.Forms.TextBox();
             this.btn_guardar_Principal = new System.Windows.Forms.Button();
-            this.btn_editar_Principal = new System.Windows.Forms.Button();
-            this.btn_eliminar_Principal = new System.Windows.Forms.Button();
+            this.btn_recargartabla_Principal = new System.Windows.Forms.Button();
+            this.btn_cancelar_Principal = new System.Windows.Forms.Button();
             this.btn_salir_Principal = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -75,57 +78,68 @@ namespace Capa_Persentacion
             // 
             this.dtgViewProductos.AllowUserToAddRows = false;
             this.dtgViewProductos.AllowUserToDeleteRows = false;
+            this.dtgViewProductos.AllowUserToResizeColumns = false;
             this.dtgViewProductos.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgViewProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dtgViewProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colum_Editar,
             this.column_Eliminar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgViewProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgViewProductos.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgViewProductos.Location = new System.Drawing.Point(6, 33);
             this.dtgViewProductos.Name = "dtgViewProductos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgViewProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dtgViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgViewProductos.Size = new System.Drawing.Size(656, 273);
             this.dtgViewProductos.TabIndex = 0;
             this.dtgViewProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgViewProductos_CellContentClick);
             // 
             // colum_Editar
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.colum_Editar.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colum_Editar.Description = "Editar";
             this.colum_Editar.HeaderText = "Editar";
             this.colum_Editar.Image = global::Capa_Persentacion.Properties.Resources.editar;
             this.colum_Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.colum_Editar.Name = "colum_Editar";
-            this.colum_Editar.ToolTipText = "Editar";
             // 
             // column_Eliminar
             // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.column_Eliminar.DefaultCellStyle = dataGridViewCellStyle8;
+            this.column_Eliminar.Description = "Borrar";
             this.column_Eliminar.HeaderText = "Eliminar";
             this.column_Eliminar.Image = global::Capa_Persentacion.Properties.Resources.borrador;
             this.column_Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.column_Eliminar.Name = "column_Eliminar";
-            this.column_Eliminar.ToolTipText = "Borrar";
             // 
             // groupBox1
             // 
@@ -169,6 +183,7 @@ namespace Capa_Persentacion
             // 
             // txt_marca_Prin
             // 
+            this.txt_marca_Prin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_marca_Prin.Font = new System.Drawing.Font("Verdana", 8F);
             this.txt_marca_Prin.ForeColor = System.Drawing.Color.Black;
             this.txt_marca_Prin.Location = new System.Drawing.Point(118, 193);
@@ -268,38 +283,39 @@ namespace Capa_Persentacion
             this.btn_guardar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
             this.btn_guardar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
-            // btn_editar_Principal
+            // btn_recargartabla_Principal
             // 
-            this.btn_editar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_editar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_editar_Principal.FlatAppearance.BorderSize = 2;
-            this.btn_editar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar_Principal.Location = new System.Drawing.Point(101, 338);
-            this.btn_editar_Principal.Name = "btn_editar_Principal";
-            this.btn_editar_Principal.Size = new System.Drawing.Size(148, 45);
-            this.btn_editar_Principal.TabIndex = 3;
-            this.btn_editar_Principal.Text = "Editar";
-            this.btn_editar_Principal.UseVisualStyleBackColor = false;
-            this.btn_editar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
-            this.btn_editar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.btn_recargartabla_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_recargartabla_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_recargartabla_Principal.FlatAppearance.BorderSize = 2;
+            this.btn_recargartabla_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_recargartabla_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recargartabla_Principal.Location = new System.Drawing.Point(18, 338);
+            this.btn_recargartabla_Principal.Name = "btn_recargartabla_Principal";
+            this.btn_recargartabla_Principal.Size = new System.Drawing.Size(148, 45);
+            this.btn_recargartabla_Principal.TabIndex = 3;
+            this.btn_recargartabla_Principal.Text = "Recargar tabla";
+            this.btn_recargartabla_Principal.UseVisualStyleBackColor = false;
+            this.btn_recargartabla_Principal.Click += new System.EventHandler(this.btn_recargartabla_Principal_Click);
+            this.btn_recargartabla_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_recargartabla_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
-            // btn_eliminar_Principal
+            // btn_cancelar_Principal
             // 
-            this.btn_eliminar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_eliminar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_eliminar_Principal.FlatAppearance.BorderSize = 2;
-            this.btn_eliminar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_Principal.Location = new System.Drawing.Point(284, 338);
-            this.btn_eliminar_Principal.Name = "btn_eliminar_Principal";
-            this.btn_eliminar_Principal.Size = new System.Drawing.Size(148, 45);
-            this.btn_eliminar_Principal.TabIndex = 4;
-            this.btn_eliminar_Principal.Text = "Eliminar";
-            this.btn_eliminar_Principal.UseVisualStyleBackColor = false;
-            this.btn_eliminar_Principal.Click += new System.EventHandler(this.btn_eliminar_Principal_Click);
-            this.btn_eliminar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
-            this.btn_eliminar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.btn_cancelar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_cancelar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar_Principal.FlatAppearance.BorderSize = 2;
+            this.btn_cancelar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar_Principal.Location = new System.Drawing.Point(279, 338);
+            this.btn_cancelar_Principal.Name = "btn_cancelar_Principal";
+            this.btn_cancelar_Principal.Size = new System.Drawing.Size(148, 45);
+            this.btn_cancelar_Principal.TabIndex = 4;
+            this.btn_cancelar_Principal.Text = "Limpiar campos";
+            this.btn_cancelar_Principal.UseVisualStyleBackColor = false;
+            this.btn_cancelar_Principal.Click += new System.EventHandler(this.btn_cancelar_Principal_Click);
+            this.btn_cancelar_Principal.MouseEnter += new System.EventHandler(this.RatonEnter);
+            this.btn_cancelar_Principal.MouseLeave += new System.EventHandler(this.RatonLeave);
             // 
             // btn_salir_Principal
             // 
@@ -308,7 +324,7 @@ namespace Capa_Persentacion
             this.btn_salir_Principal.FlatAppearance.BorderSize = 2;
             this.btn_salir_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir_Principal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir_Principal.Location = new System.Drawing.Point(467, 338);
+            this.btn_salir_Principal.Location = new System.Drawing.Point(526, 338);
             this.btn_salir_Principal.Name = "btn_salir_Principal";
             this.btn_salir_Principal.Size = new System.Drawing.Size(148, 45);
             this.btn_salir_Principal.TabIndex = 5;
@@ -388,8 +404,8 @@ namespace Capa_Persentacion
             this.panel3.Controls.Add(this.lb_cerrar_Principal);
             this.panel3.Controls.Add(this.lb_minimizar_Principal);
             this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.btn_editar_Principal);
-            this.panel3.Controls.Add(this.btn_eliminar_Principal);
+            this.panel3.Controls.Add(this.btn_recargartabla_Principal);
+            this.panel3.Controls.Add(this.btn_cancelar_Principal);
             this.panel3.Controls.Add(this.btn_salir_Principal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(329, 35);
@@ -447,6 +463,7 @@ namespace Capa_Persentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_salir_Principal;
             this.ClientSize = new System.Drawing.Size(1016, 448);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -485,8 +502,8 @@ namespace Capa_Persentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_nombre_Prin;
         private System.Windows.Forms.Button btn_guardar_Principal;
-        private System.Windows.Forms.Button btn_editar_Principal;
-        private System.Windows.Forms.Button btn_eliminar_Principal;
+        private System.Windows.Forms.Button btn_recargartabla_Principal;
+        private System.Windows.Forms.Button btn_cancelar_Principal;
         private System.Windows.Forms.Button btn_salir_Principal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

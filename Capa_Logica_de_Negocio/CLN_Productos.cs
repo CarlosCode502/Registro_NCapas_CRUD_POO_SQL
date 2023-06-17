@@ -23,7 +23,7 @@ namespace Capa_Logica_de_Negocio
         /// <summary>
         /// Instancia de la clase CD_Productos que permitira acceder a sus métodos.
         /// </summary>
-        private CD_Productos cd_producto_Objeto = new CD_Productos();
+        private readonly CD_Productos cd_producto_Objeto = new CD_Productos();
         #endregion
 
         #region Métodos
@@ -34,8 +34,8 @@ namespace Capa_Logica_de_Negocio
         /// <returns>Una tabla.</returns>
         public DataTable MostrarProducto()
         {
-            DataTable tabla = new DataTable();
-            tabla = cd_producto_Objeto.Mostrar();
+            _= new DataTable();
+            DataTable tabla = cd_producto_Objeto.Mostrar();
             return tabla;
         }
 
@@ -54,7 +54,20 @@ namespace Capa_Logica_de_Negocio
         public void InsertarProducto(String nombre, String descripcion, String marca, String precio,
             String stock)
         {
-            cd_producto_Objeto.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
+            //int valorNumerico;
+
+            //bool esNumero = int.TryParse(precio, out valorNumerico);
+
+            //if(esNumero == true)
+            //{
+            //    precio = precio + "{0:0.00}";
+            //}
+
+            //String percioAddCeros = precio + "{0:N2}";
+
+            //Double d_Ceros = Convert.ToDouble(percioAddCeros);
+            //d_Ceros = (Math.Truncate( d_Ceros * 10000) / 10000);
+            cd_producto_Objeto.Insertar(nombre, descripcion, marca, Convert.ToDecimal(precio), Convert.ToInt32(stock));
         }
 
         /// <summary>
@@ -69,7 +82,7 @@ namespace Capa_Logica_de_Negocio
         public void EditarProducto(String nombre, String descripcion, String marca, String precio,
             String stock, String id_producto)
         {
-            cd_producto_Objeto.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock),
+            cd_producto_Objeto.Editar(nombre, descripcion, marca, Convert.ToDecimal(precio), Convert.ToInt32(stock),
                 Convert.ToInt32(id_producto));
         }
 
