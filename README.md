@@ -1,4 +1,4 @@
-# Registro_NCapas_CRUD_POO_SQL
+#SISTEMA DE REGISTRO (NCapas, CRUD, POO y SQL como GBD)
 Sistema de registro de productos. 
 
 Hecho hasta ahora:
