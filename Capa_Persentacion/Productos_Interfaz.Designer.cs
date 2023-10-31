@@ -29,12 +29,12 @@ namespace Capa_Persentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos_Interfaz));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgViewProductos = new System.Windows.Forms.DataGridView();
             this.colum_Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.column_Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -82,36 +82,36 @@ namespace Capa_Persentacion
             this.dtgViewProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtgViewProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dtgViewProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgViewProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgViewProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colum_Editar,
             this.column_Eliminar});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgViewProductos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgViewProductos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgViewProductos.Location = new System.Drawing.Point(6, 33);
             this.dtgViewProductos.Name = "dtgViewProductos";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgViewProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgViewProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgViewProductos.Size = new System.Drawing.Size(656, 273);
             this.dtgViewProductos.TabIndex = 0;
@@ -119,10 +119,10 @@ namespace Capa_Persentacion
             // 
             // colum_Editar
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.colum_Editar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.colum_Editar.DefaultCellStyle = dataGridViewCellStyle2;
             this.colum_Editar.Description = "Editar";
             this.colum_Editar.HeaderText = "Editar";
             this.colum_Editar.Image = global::Capa_Persentacion.Properties.Resources.editar;
@@ -131,10 +131,10 @@ namespace Capa_Persentacion
             // 
             // column_Eliminar
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.column_Eliminar.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.column_Eliminar.DefaultCellStyle = dataGridViewCellStyle3;
             this.column_Eliminar.Description = "Borrar";
             this.column_Eliminar.HeaderText = "Eliminar";
             this.column_Eliminar.Image = global::Capa_Persentacion.Properties.Resources.borrador;
@@ -155,7 +155,7 @@ namespace Capa_Persentacion
             this.groupBox1.Controls.Add(this.txt_nombre_Prin);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Orange;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(321, 312);
@@ -267,7 +267,7 @@ namespace Capa_Persentacion
             // 
             // btn_guardar_Principal
             // 
-            this.btn_guardar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_guardar_Principal.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_guardar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_guardar_Principal.FlatAppearance.BorderSize = 2;
             this.btn_guardar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -285,7 +285,7 @@ namespace Capa_Persentacion
             // 
             // btn_recargartabla_Principal
             // 
-            this.btn_recargartabla_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_recargartabla_Principal.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_recargartabla_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_recargartabla_Principal.FlatAppearance.BorderSize = 2;
             this.btn_recargartabla_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -302,7 +302,7 @@ namespace Capa_Persentacion
             // 
             // btn_cancelar_Principal
             // 
-            this.btn_cancelar_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_cancelar_Principal.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_cancelar_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_cancelar_Principal.FlatAppearance.BorderSize = 2;
             this.btn_cancelar_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -319,7 +319,8 @@ namespace Capa_Persentacion
             // 
             // btn_salir_Principal
             // 
-            this.btn_salir_Principal.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_salir_Principal.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_salir_Principal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_salir_Principal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_salir_Principal.FlatAppearance.BorderSize = 2;
             this.btn_salir_Principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -438,7 +439,7 @@ namespace Capa_Persentacion
             this.groupBox2.Controls.Add(this.dtgViewProductos);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Orange;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(668, 312);

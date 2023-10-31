@@ -84,7 +84,7 @@ namespace Capa_Persentacion
             var boton = (Button)sender;//Recibe el control especifico.
             boton.FlatAppearance.BorderColor = Color.Black;//Cambia del color anterior el borde del control.
             boton.FlatAppearance.BorderSize = 2;//Cambia de tamaño anterior el borde del control.
-            boton.BackColor = Color.LightSkyBlue;//Cambia el color del control.
+            boton.BackColor = Color.DeepSkyBlue;//Cambia el color del control.
             boton.ForeColor = Color.Black;//Cambia el color de la letra del control
         }
 
